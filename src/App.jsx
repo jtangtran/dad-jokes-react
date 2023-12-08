@@ -18,13 +18,13 @@ function App() {
   ]);
 
   const handleAddJoke = (text) => {
-    const newJoke = {
-      id: self.crypto.randomUUID(),
-      likes: 0,
-      text: text
-    };
-    setJokes([...jokes, newJoke]);
-    // console.log("New Joke:", text)
+    setJokes([...jokes, 
+      {
+        id: self.crypto.randomUUID(),
+        likes: 0,
+        text: text
+      }
+    ]);
   }
 
   const handleDelete = (id) => {
